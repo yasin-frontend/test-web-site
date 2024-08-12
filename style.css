@@ -1,0 +1,716 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Galdeano&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+    border: none;
+    outline: none;
+}
+
+:root{
+    --main-color: #FF6600;
+    --bg-color: #F4F4F4;
+    --bg-color404: #EAE9E8;
+    --other-bg-color: #FFF;
+    --other-main-color: #172139;
+    --texts-color: #172139;
+    --other-texts-color: #000;
+    --reserve-texts-color: #FFF;
+    --main-font: "Fira Sans", sans-serif;
+    --reserve-font: "Montserrat", sans-serif;
+}
+
+body{
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+.alert-div{
+    width: 100%;
+    height: 100vh;
+    background-color: #1721395d;
+    position: absolute;
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-div{
+    width: clamp(460px, 460px, 500px);
+    height: 520px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    gap: 18px;
+}
+
+.add-div h3{
+    font-size: var(--other-texts-color);
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 0;
+}
+
+.form1{
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.form1 input{
+    width: 100%;
+    height: 50px;
+    background-color: #F5F5F5;
+    color: rgb(110, 110, 110);
+    padding-left: 6%;
+    padding-right: 3%;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Galdeano", sans-serif;
+}
+
+.form1 input::placeholder{
+    color: #AEAEAE;
+}
+
+.input-div{
+    width: 100%;
+    height: 50px;
+    background-color: #F5F5F5;
+    color: #AEAEAE;
+    padding-right: 7%;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Galdeano", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input-div img{
+    width: 10px;
+    cursor: pointer;
+}
+
+.input-div input{
+    width: 100%;
+}
+
+.boxes{
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.settings{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.settings p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--texts-color);
+    font-family: "Galdeano", sans-serif;
+}
+
+.settings .button{
+    width: 52px;
+    height: 28px;
+    border-radius: 100px;
+    position: relative;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+}
+
+.button .radius{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-radius: 100%;
+    background-color: var(--main-color);
+    left: 6%;
+    cursor: pointer;
+}
+
+.one{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.two{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-div{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.btn-div button{
+    width: 173px;
+    height: 50px;
+    border: 2px solid var(--other-main-color);
+    color: var(--texts-color);
+    font-size: 14px;
+    font-family: var(--main-font);
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-div .done{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    background-color: var(--other-main-color);
+    color: var(--reserve-texts-color);
+    justify-content: center;
+}
+
+.remene-div{
+    width: clamp(460px, 460px, 500px);
+    height: 99vh;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    gap: 18px;
+}
+
+.remene-div h3{
+    font-size: var(--other-texts-color);
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 0;
+}
+
+.remene-div .btn-div{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.remene-div .form1 label{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--texts-color);
+    font-family: var(--main-font);
+}
+
+.btnss{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnss button{
+    width: 173px;
+    height: 50px;
+    border: 2px solid var(--other-main-color);
+    color: var(--texts-color);
+    font-size: 14px;
+    font-family: var(--main-font);
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btnss{
+    display: flex;
+    color: var(--reserve-texts-color);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-div .save{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    background-color: var(--other-main-color);
+    color: var(--reserve-texts-color);
+}
+
+
+nav{
+    width: 100%;
+    height: 78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--other-bg-color);
+}
+
+.navbar{
+    width: clamp(95%, 97%, 97%);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: start;
+    gap: 6px;
+}
+
+.logo img{
+    width: 18px;
+}
+
+.version{
+    width: 37px;
+    height: 16px;
+    transform: translateY(-80%);
+    background-color: var(--main-color);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.version span{
+    color: var(--bg-color);
+    font-size: 12px;
+    font-family: var(--main-font)
+}
+
+.navbar i{
+    font-size: 18px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.big{
+    width: 98%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 30px 0px;
+    background-color: transparent;
+    position: relative;
+}
+
+.nav{
+    width: 270px;
+    height: 440px;
+    background-color: var(--other-bg-color);
+    border-radius: 0 3px 0 3px;
+    overflow: hidden;
+    transition: .3s;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+}
+
+.menu-divs{
+    width: 100%;
+    min-height: 62px;
+    border-bottom: 1px solid var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding-left: 20px;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.menu-divs:hover{
+    background-color: var(--other-main-color);
+}
+
+.menu-divs:hover h3{
+    color: var(--bg-color);
+}
+
+.menu-divs img{
+    width: 15px;
+}
+
+.menu-divs h3{
+    font-size: 17px;
+    font-weight: 400;
+    font-family: var(--main-font);
+    color: var(--texts-color);
+    transition: .25s ease;
+}
+
+.active-div{
+    background-color: var(--other-main-color);
+}
+.active-div h3{
+    color: var(--bg-color);
+}
+
+.menu-list{
+    width: 100%;
+    min-height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.menu-list img{
+    width: 10px;
+}
+
+.menu-list h3{
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.headers{
+    width: 78%;
+    display: flex;
+    justify-content: flex-end;
+    transition: .3s;
+}
+
+.header1{
+    width: 100%;
+    height: auto;
+    padding-bottom: 12px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.menu{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.btns-menu h1{
+    font-weight: 500;
+    font-family: var(--main-font);
+    color: var(--other-texts-color);
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.btns{
+    padding: 25px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.btns button{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: var(--main-font);
+    color: var(--texts-color);
+    padding: 10px 25px;
+    background-color: var(--other-bg-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .25s linear;
+}
+
+.btns button:hover{
+    background-color: var(--other-main-color);
+    color: var(--reserve-texts-color);
+}
+
+.btn-animation{
+    animation: btn 0.18s;
+}
+
+@keyframes btn{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.95);
+    }
+}
+
+.btns .active{
+    background-color: var(--other-main-color);
+    color: var(--reserve-texts-color);
+}
+
+.create-btn{
+    padding: 13px 45px;
+    background-color: var(--other-main-color);
+    color: var(--reserve-texts-color);
+    font-family: 14px;
+    font-family: var(--main-font);
+    font-weight: 300;
+    display: flex;
+    gap: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.create-btn img{
+    width: 13px;
+}
+
+.search-menu{
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.search-menu button{
+    display: flex;
+    padding: 10px 14px;
+    gap: 10px;
+    align-items: center;
+    background-color: var(--other-main-color);
+    color: var(--reserve-texts-color);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--main-font);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-menu button img{
+    width: 20px;
+}
+
+.img-anim{
+    transform: rotate(360deg);
+    transition: 0.5s;
+}
+
+.search-menu button span{
+    font-size: 10px;
+    font-weight: 500;
+    font-family: var(--main-font);
+}
+
+.inputs{
+    display: flex;
+    gap: 20px;
+}
+
+.inputs label{
+    font-family: var(--reserve-font);
+    color: var(--other-texts-color);
+    font-size: 14px;
+}
+
+.check-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.inputs input{
+    width: 285px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--other-bg-color);
+    padding-left: 15px;
+}
+
+.inputs input::placeholder{
+    color: #AEAEAE;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--main-font);
+    letter-spacing: 1px;
+}
+
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--main-color);
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    color: var(--bg-color);
+}
+
+input[type="checkbox"] {
+    appearance: none; /* Убирает стандартный стиль чекбокса */
+    background-color: #fff;
+    border: 2px solid #FF6600;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '✔';
+    position: absolute;
+    left: 12%;
+    top: -22%;
+    font-size: 18px;
+    color: var(--reserve-texts-color);
+}
+
+.locations-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+}
+
+.very_big{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow: hidden;
+}
+
+.big-one{
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 6px 0;
+}
+
+.big-one p{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--main-color);
+    font-family: var(--reserve-font);
+}
+
+.set{
+    display: flex;
+    gap: 15px;
+}
+
+.set h3{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--main-font);
+}
+
+.set img{
+    cursor: pointer;
+}
+
+.rad{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.rad img{
+    width: 8px;
+}
+
+.coniform-div{
+    display: flex;
+    gap: 13px;
+}
+
+.coniform-div p{
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--other-texts-color);
+    font-family: var(--reserve-font);
+}
+
+.coniform-div .p-kod{
+    font-weight: 700;
+}
+
+.set2{
+    display: flex;
+    gap: 18px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.big-one:hover .set2{
+    opacity: 1;
+}
+
+.set2 button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--main-color);
+    font-family: var(--reserve-font);
+    background-color: transparent;
+}
+
+.set2 button:nth-child(2){
+    color: #FF5959;
+}
+
+.set2 button img{
+    width: 12px;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: 0.5s ease-out;
+}
+
+.not-found{
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.not-found img{
+    width: 65%;
+}
