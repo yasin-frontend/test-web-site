@@ -190,10 +190,10 @@ done.addEventListener("click", () => {
 
 
     h3.textContent = inp1.value;
-    img_img.src = "/img/Group532.svg";
-    img_img1.src = "/img/Плюс.svg";
-    btn1_img.src = "/img/change.svg";
-    btn2_img.src = "/img/remove.svg";
+    img_img.src = "img/Group532.svg";
+    img_img1.src = "img/Плюс.svg";
+    btn1_img.src = "img/change.svg";
+    btn2_img.src = "img/remove.svg";
     btn1.textContent = "Редактировать";
     btn2.textContent = "Удалить";
     btn1.style.cursor = "pointer";
@@ -272,7 +272,6 @@ done.addEventListener("click", () => {
             } else {
                 bigOneElement.querySelector("p").textContent = document.querySelector(".inp2").value;
             }
-            // Assume RFID is displayed as another p element, similar to how "Без штрихкода" is.
             if (document.querySelector(".inp3").value.trim() !== "") {
                 let rfidElement = bigOneElement.querySelector(".p-rfid");
                 if (!rfidElement) {
@@ -397,5 +396,3 @@ menu_divs.forEach(item => {
         }
     });
 });
-
-
